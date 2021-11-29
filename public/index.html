@@ -1,1 +1,49 @@
-Hello
+<html>
+<head>
+    <title>DAI - Dynamic Ad Insertion</title>
+
+    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3_dai.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #container {
+            position: relative;
+            max-width: 640px;
+            margin: 10px auto;
+        }
+        #video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+        }
+        #video-element {
+            /* forces the contents to fill the container */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #ad-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>DAI - Dynamic Ad Insertion</h1>
+    <h2>IMA SDK DAI Demo (HLS.JS)</h2>
+    <div id="container">
+        <div id="video-container">
+            <video id="video-element" webkit-playsinline="true" playsinline="true"></video>
+            <div id="ad-container"></div>
+        </div>
+    </div>
+
+    <script src="js/dai.js"></script>
+</body>
+</html>
